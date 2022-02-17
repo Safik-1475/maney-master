@@ -8,6 +8,7 @@ function montlyExpenses() {
     // house rent
     const houseRent = document.getElementById('rent');
     const houseRentValue = parseFloat(houseRent.value);
+    // clothes cost
     const clothesCost = document.getElementById('clothes');
     const clothesCostValue = parseFloat(clothesCost.value);
     // montly expensive total
@@ -15,13 +16,13 @@ function montlyExpenses() {
     const montlyExpensesCount = foodCostValue + houseRentValue + clothesCostValue;
     montlyExpenses.innerText = montlyExpensesCount;
 
-    const balance = document.getElementById('balance');
-    const balanceTotal = parseFloat(incomeValue - montlyExpensesCount);
-    balance.innerText = balanceTotal;
+    const currency = document.getElementById('balance');
+    const bdCurrency = parseFloat(incomeValue - montlyExpensesCount);
+    currency.innerText = bdCurrency;
+    // Error Handle
+    if (foodCostValue < 0 && foodCostValue < incomeValue) {
 
-
-
-
+    }
 }
 
 // Event handle calculate button
@@ -32,7 +33,8 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 // Saving Amount event handler button
 document.getElementById('saving-amount-btn').addEventListener('click', function () {
-    savingAmount();
+    // montlyExpenses('balance')
+    savingAmount()
 });
 // saving amount 
 function savingAmount() {
@@ -46,4 +48,9 @@ function savingAmount() {
     document.getElementById('saving-amount').innerText = percentage;
     document.getElementById('remaining-balance').innerText = balanceText - percentage;
 
-}
+    //Error Handle
+    if (percentage > balanceText) {
+        alert("You haven't enough money for doing save")
+    }
+
+};
