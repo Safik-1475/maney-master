@@ -34,49 +34,51 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-5 col-lg-5">
                     <h3 class="text-center my-0">Montly Income</h3>
-                    <form action="#">
+                    <form>
                         <div class="row my-3">
-                            <label for="inputPassword" class="col-sm-2 col-form-label fw-bold">Income: </label>
+                            <label for="income" class="col-sm-2 col-form-label fw-bold">Income: </label>
                             <div class="col-sm-10">
-                                <input type="number" placeholder="17,380" class="form-control" id="inputPassword">
+                                <input type="number" placeholder="BDT 17,380" class="form-control" id="income">
                             </div>
                         </div>
                         <h5 class="text-center my-0">Expenses</h5>
                         <div class="row my-3">
-                            <label for="inputPassword" class="col-sm-2 col-form-label fw-bold">Food: </label>
+                            <label for="food" class="col-sm-2 col-form-label fw-bold">Food: </label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="inputPassword">
+                                <input type="number" placeholder="Food Cost BDT" class="form-control" id="food">
                             </div>
                         </div>
                         <div class="row my-3">
-                            <label for="inputPassword" class="col-sm-2 col-form-label fw-bold">Rent: </label>
+                            <label for="rent" class="col-sm-2 col-form-label fw-bold">Rent: </label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="inputPassword">
+                                <input type="number" placeholder="House Rent BDT" class="form-control" id="rent">
                             </div>
                         </div>
                         <div class="row my-3">
-                            <label for="inputPassword" class="col-sm-2 col-form-label fw-bold">Clothes: </label>
+                            <label for="clothes" class="col-sm-2 col-form-label fw-bold">Clothes: </label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="inputPassword">
+                                <input type="number" placeholder="Clothes BDT" class="form-control" id="clothes">
                             </div>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-sm-5 col-12 d-flex justify-content-center ml-4">
-                                <button class="btn btn-md btn-info">Calculate</button>
+                        <div class="row my-3 d-flex justify-content-center">
+                            <div class="col-sm-8 col-12">
+                                <input id="calculate-btn" type="submit" value="Calculate"
+                                    class="form-control btn btn-md bg-info ">
                             </div>
-                            <h5 class="text-center my-2">Total Exponses:</h5>
-                            <h5 class="text-center">Balance:</h5>
+                            <h5 class="text-center my-2">Total Exponses : <span id="total-expenses"></span></h5>
+                            <h5 class="text-center">Balance : <span id="balance"></span></h5>
                         </div>
                         <div class="row my-3 ">
                             <label for="inputPassword" class="col-sm-2 col-form-label fw-bold">Save: </label>
                             <div class="col-sm-4 col-12">
-                                <input type="number" class="form-control" placeholder="%">
+                                <input type="number" id="percentage-field" class="form-control" placeholder="%">
                             </div>
                             <div class="col-sm-5 col-12">
-                                <input type="submit" value="Submit" class="form-control btn btn-md bg-info">
+                                <input id="saving-amount-btn" type="submit" value="Save"
+                                    class="form-control btn btn-md bg-info">
                             </div>
-                            <h5 class="text-center my-1">Saving Amount:</h5>
-                            <h5 class="text-center">Remaining Balance:</h5>
+                            <h5 class="text-center my-1">Saving Amount: <span id="saving-amount"></span></h5>
+                            <h5 class="text-center">Remaining Balance: <span id="remaining-balance"></span></h5>
                         </div>
                     </form>
                 </div>
